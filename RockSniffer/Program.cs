@@ -27,7 +27,7 @@ namespace RockSniffer
 {
     class Program
     {
-        internal const string version = "0.6.10";
+        internal const string version = "0.6.10-rocklist.1";
 
         internal static ICache cache;
         internal static Config config;
@@ -148,7 +148,7 @@ namespace RockSniffer
 
         private async void VersionCheck()
         {
-            if (version.Contains("PR"))
+            if (version.Contains("PR") || version.Contains("-"))
             {
                 Logger.Log("Pre-release version, skipping version check");
                 return;
