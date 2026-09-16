@@ -4,7 +4,22 @@ A fork of [kokolihapihvi's RockSniffer](https://github.com/kokolihapihvi/RockSni
 
 RockSniffer adds pause/resume detection, structured playthrough history logging, Score Attack stat tracking, and configurable event output — features designed for stat tracking, stream automation, and post-session video editing.
 
-Requires the companion [RockSnifferLib](https://github.com/PoizenJam/RockSnifferLib) fork.
+Uses the maintained [RockSnifferLib](https://github.com/Jamesllllllllll/RockSnifferLib)
+fork, included as a pinned submodule.
+
+## Experimental multiplayer and profile observation
+
+In `config/sniffer.json`, set `enableExperimentalMultiplayer` to `true` to include
+separate multiplayer snapshots in memory readouts. Profile observation is also
+opt-in through `enableExperimentalProfiles`; supply `experimentalProfileCatalog`
+with saved profile IDs and names and start observing before login.
+
+Both features are available for Remastered and Learn & Play. Learn & Play has
+live validation; Remastered is available for community testing. Profile
+observation infers the initial login and does not identify multiplayer slots.
+See the library's [multiplayer API](https://github.com/Jamesllllllllll/RockSnifferLib/blob/master/RSHelpers/Multiplayer/README.md)
+and [profile API](https://github.com/Jamesllllllllll/RockSnifferLib/blob/master/RSHelpers/Profiles/README.md)
+for snapshot semantics and limitations.
 
 ---
 
